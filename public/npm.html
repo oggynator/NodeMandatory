@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/stylesheet/stylesheet.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="jquery.js"></script>
+    <title>NPM</title>
+</head>
+<body>
+    <a href="/">
+    <img src="/media/main.png" alt="logo" id="main-logo">
+    </a>
+
+    <header id="header"><p>NPM</p></header>
+
+	<div id="container">
+
+		<main id="center" class="column">
+			<article>
+			
+                <h1 >What is NPM?</h1>
+                
+                <p>Node Package Manager or npm for short, is a free to use package manager. Node.js comes bundled with npm, so no additional installation is required. It was created specifically for Node.js, hence the name, but it can also be used for other projects. <br> npm enables the developer the reuse already developed software components, this speeds up the development process and provides well-tested functionality to the project. </p>				
+				<h3>How to use npm in a Node.js project</h3>
+				<p>All npm dependencies is defined in a JSON file called “package.json”. A smart way to start define the “package.json” file, is to use the “npm init” command which will fill out the file with information such as package name and version number, but also a lot of other information. Added dependencies must be defined in the “dependencies” key value pair.
+				<br>Example of “package.json” file here: (click to enlarge) </p>
+				<!-- Trigger the Modal -->
+				<img src="/media/package.png" alt="The package.json file with dependencies and scripts" id="myImg" style="width:100%;max-width:200px">
+				
+				<!-- The Modal -->
+				<div id="myModal" class="modal">
+				
+				  <!-- The Close Button -->
+				  <span class="close">&times;</span>
+				
+				  <!-- Modal Content (The Image) -->
+				  <img class="modal-content" id="myImg1">
+				
+				  <!-- Modal Caption (Image Text) -->
+				  <div id="caption"></div>
+				</div>
+				<p>NPM commands are written in the terminal, some (but far from all) of the commands we have used so far are:</p>
+				<div class="codeborder">
+				<code >
+<pre class="codebox">
+npm init
+</pre>
+				</code> 
+				<p>As explained above, this initalizes the "package.json" file which enables the developer to use npm.</p>
+			</div>
+			<br>
+			<div class="codeborder">
+				<code >
+<pre class="codebox">
+npm install (PACKAGE NAME)
+</pre>
+				</code> 
+				<p>This installs a npm package, the dependency is automatically added to the dependency key value pair in "package.json" file. A new package can be installed either locally or globally, in general a local install is preferable. </p>
+			</div>
+			<br>
+			<div class="codeborder">
+				<code >
+<pre class="codebox">
+npm run (SCRIPT NAME)
+</pre>
+				</code> 
+				<p>This runs a given script from the "package.json" file, this gives the developer the option of choosen how they want to run their project.</p>
+			</div>
+				<br>
+				<h3>Some of the NPM packages that we have used</h3>
+				<p>Express: A small web development framework, it provides the developer with a set of useful features for web development.</p>
+				<p>Nodemon: A tool that will restart the application when changes in the source are detected, prevents the developer from manually having to restart the application. </p>	
+				<p>cross-env: Enables the developer to use environment variables, without having to be concerned about which platform execute the program</p>
+				
+			</article>								
+		</main>
+
+		<nav id="left" class="column">
+			<h3>Menu</h3>
+			<ul>
+				<li><a href="/">Node.js</a></li>
+				<li><a href="/noderun">Running Node.js</a></li>
+				<li><a href="/npm">NPM</a></li>
+				<li><a href="/rest">REST</a></li>
+				<li><a href="/jquery">jQuery</a></li>
+			</ul>
+		</nav>
+
+	</div>
+
+	<div id="footer-wrapper">
+		<footer id="footer"><p>Made by August Hejberg [ https://github.com/oggynator ]</p></footer>
+	</div>
+
+	<script>
+		// Get the modal
+		var modal = document.getElementById("myModal");
+		
+		// Get the image and insert it inside the modal - use its "alt" text as a caption
+		var img = document.getElementById("myImg");
+		var modalImg = document.getElementById("myImg1");
+		var captionText = document.getElementById("caption");
+		img.onclick = function(){
+		  modal.style.display = "block";
+		  modalImg.src = this.src;
+		  captionText.innerHTML = this.alt;
+		}
+		
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+		
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+		  modal.style.display = "none";
+		}
+		
+	</script>
+</body>
+</html>

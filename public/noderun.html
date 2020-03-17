@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/stylesheet/stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="jquery.js"></script>
+    <title>Running Node.js</title>
+</head>
+<body>
+    <a href="/">
+    <img src="/media/main.png" alt="logo" id="main-logo">
+    </a>
+
+    <header id="header"><p>Running Node.js</p></header>
+
+	<div id="container">
+
+		<main id="center" class="column">
+			<article>
+			
+                <h1>How do we run Node.js ?</h1>
+                
+				<p>A Node.js project can be executed in different ways, depending on what the developer wish to achieve, this page will describe some different ways to run code.</p>
+				
+				<h3>Via the terminal </h3>
+				<div class="codeborder">
+					<code >
+<pre class="codebox">
+node app.js
+</pre>
+					</code> 
+					<p>This simply runs the node project, no new changes will be detected and the developer has to restart the app to execute new changes</p>
+				</div>
+				<br>
+				<div class="codeborder">
+					<code >
+<pre class="codebox">
+nodemon app.js
+</pre>
+					</code> 
+					<p>After adding the nodemon dependency, the developer can use the nodemon tool to continueasly and automatically restart the project when new changes are detected </p>
+				</div>
+				<br>
+				<div class="codeborder">
+					<code >
+<pre class="codebox">
+budo index.js --live --open
+</pre>
+					</code> 
+					<p>After installing budo (often via a npx command), the developer can use the tool to "browserify" the development. This means that the code is automatically rerun on new changes and the browser window automatically refreshes so the developer can instantenously see the changes. </p>
+				</div>
+				<br>
+				<h3>Via the run script in the package.json file</h3>
+				<div class="codeborder">
+					<code >
+<pre class="codebox">
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "cross-env PORT=80 node app.js",
+		"start-dev": "cross-env PORT=3000 nodemon app.js"
+	  },
+</pre>
+					</code> 
+					<p>The developer can define run scripts in a JSON format in the "package.json" file. By defining different scripts, the developer can run the web app with different conditions. One script might be used for running the web app in production, one might be used for testing and one might be used for development. <br> <br> In the code above, we combine nodemon and the cross-env dependency and define a "start-dev" command that can be used for development. We also define different ports depending on how we wish to run the code. We execute the script by starting it from the terminal, like in the example below:</p>
+					<code >
+<pre class="codebox">
+npm run start-dev
+</pre>
+					</code> 
+				</div>
+				<br>
+				
+			</article>								
+		</main>
+
+		<nav id="left" class="column">
+			<h3>Menu</h3>
+			<ul>
+				<li><a href="/">Node.js</a></li>
+				<li><a href="/noderun">Running Node.js</a></li>
+				<li><a href="/npm">NPM</a></li>
+				<li><a href="/rest">REST</a></li>
+				<li><a href="/jquery">jQuery</a></li>
+			</ul>
+		</nav>
+
+	</div>
+
+	<div id="footer-wrapper">
+		<footer id="footer"><p>Made by August Hejberg [ https://github.com/oggynator ]</p></footer>
+	</div>
+
+    
+</body>
+</html>

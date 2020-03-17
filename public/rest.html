@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/stylesheet/stylesheet.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="jquery.js"></script>
+    <title>REST</title>
+</head>
+<body>
+    <a href="/">
+    <img src="/media/main.png" alt="logo" id="main-logo">
+    </a>
+
+    <header id="header"><p>REST</p></header>
+
+	<div id="container">
+
+		<main id="center" class="column">
+			<article>
+			
+                <h1>What is a REST API?</h1>
+                
+                <p>An API is a set of rules and functionality that software follows when it communicates with other software.</p>
+				<p>REST API (representational state transfer) is a software architectural style, that defines what a piece of software can provide how it is provided.</p>
+				<p>An API that is considered RESTful will often provide some if not all of the four core operations of CRUD(Create, Read, Update, Delete). <br> Here is an example of the Twitter API for tweets, eg. it describes the format of responses and which HTTP methods it supports: (click to enlarge)</p>
+				<!-- Trigger the Modal -->
+				<img src="/media/tweetapi.png" alt="The Twitter API" id="myImg" style="width:100%;max-width:100px">
+				
+				<!-- The Modal -->
+				<div id="myModal" class="modal">
+				
+				  <!-- The Close Button -->
+				  <span class="close">&times;</span>
+				
+				  <!-- Modal Content (The Image) -->
+				  <img class="modal-content" id="myImg1">
+				
+				  <!-- Modal Caption (Image Text) -->
+				  <div id="caption"></div>
+				</div>
+				<br>
+				<br>
+				<h4>Implemented API</h4>
+				<p>This web app has its own implented API which handles mobile devices, it supports all the CRUD functions. <br> The url to access the devices is:</p>
+				<p style="font-weight: bolder;">localhost:3000/rest/devices</p>
+				<p>This API could be expanded and then used in another application or maybe to generate a webpage that sells or informs customers about mobile devices. The JSON format can be converted to HTML with a tempating library like json2html, which can be found in npm.</p>
+			</article>								
+		</main>
+
+		<nav id="left" class="column">
+			<h3>Menu</h3>
+			<ul>
+				<li><a href="/">Node.js</a></li>
+				<li><a href="/noderun">Running Node.js</a></li>
+				<li><a href="/npm">NPM</a></li>
+				<li><a href="/rest">REST</a></li>
+				<li><a href="/jquery">jQuery</a></li>
+			</ul>
+		</nav>
+
+	</div>
+
+	<div id="footer-wrapper">
+		<footer id="footer"><p>Made by August Hejberg [ https://github.com/oggynator ]</p></footer>
+	</div>
+
+
+
+	<script>
+		// Get the modal
+		var modal = document.getElementById("myModal");
+		
+		// Get the image and insert it inside the modal - use its "alt" text as a caption
+		var img = document.getElementById("myImg");
+		var modalImg = document.getElementById("myImg1");
+		var captionText = document.getElementById("caption");
+		img.onclick = function(){
+		  modal.style.display = "block";
+		  modalImg.src = this.src;
+		  captionText.innerHTML = this.alt;
+		}
+		
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+		
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+		  modal.style.display = "none";
+		}
+		
+	</script>
+    
+</body>
+</html>

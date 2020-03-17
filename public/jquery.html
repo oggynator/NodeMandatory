@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/stylesheet/stylesheet.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="jquery.js"></script>
+    <title>jQuery</title>
+</head>
+<body>
+    <a href="/">
+    <img src="/media/main.png" alt="logo" id="main-logo">
+    </a>
+
+    <header id="header"><p>jQuery</p></header>
+
+	<div id="container">
+
+		<main id="center" class="column">
+			<article>
+			
+                <h1>What is jQuery and how can it help us?</h1>
+                
+				<p>jQuery is a Javascript library with the motto: “Write Less Do More”. </p>
+				<p>It provides developers with faster, safer and more robust code. This is because it is quality tested and optimized and prevents developers from thinking too much about declaration and more about implementation. </p>
+				<p>Basic syntax of jQuery code is: $(selector).action() </p>
+
+				<h3>Example of what we can do with jQuery:</h3>
+
+				<div class="codeborder">
+				<h5 id="removable"> Hvis man trykker på den her tekst bliver det fjernet</h5>
+				</div>
+				<br>
+
+				<div class="codeborder">
+				<p>Teksten i dette felt kan ændres: <input type="text" id="changeable" value="Kan ændres"></p>
+				<button id="changebtn">Skift tekst</button>
+				</div>
+				<br>
+				
+				<div class="codeborder">
+				<h5>Herunder er der en liste</h5>
+				<ol id="first-list">
+					<li class="reason">Reason 1</li>
+					<li>Reason 2</li>
+					<li>Reason 3</li>
+				</ol>
+				<button id="submit-button">
+					Click
+				</button>
+				</div>
+				<br>
+
+			</article>								
+		</main>
+
+		<nav id="left" class="column">
+			<h3>Menu</h3>
+			<ul>
+				<li><a href="/">Node.js</a></li>
+				<li><a href="/noderun">Running Node.js</a></li>
+				<li><a href="/npm">NPM</a></li>
+				<li><a href="/rest">REST</a></li>
+				<li><a href="/jquery">jQuery</a></li>
+			</ul>
+		</nav>
+
+	</div>
+
+	<div id="footer-wrapper">
+		<footer id="footer"><p>Made by August Hejberg [ https://github.com/oggynator ]</p></footer>
+	</div>
+
+    
+</body>
+</html>

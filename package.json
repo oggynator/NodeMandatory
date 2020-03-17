@@ -1,0 +1,26 @@
+{
+  "name": "nodemandatory",
+  "version": "1.0.0",
+  "description": "Web App that describes what we have learned so far in this elective",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env PORT=80 node app.js",
+    "start-dev": "cross-env PORT=3000 nodemon app.js"
+  },
+  "keywords": [
+    "web",
+    "app",
+    "information"
+  ],
+  "author": "August Hejberg",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^7.0.2",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  }
+}
+
+
+
